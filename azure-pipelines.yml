@@ -1,6 +1,13 @@
 trigger:
 - '*'
 
+schedules:
+- cron: "0 3 * * 1,2,3,4,5"
+  displayName: WeekDay 3am build
+  branches:
+    include:
+    - main
+
 pool:
   vmImage: 'ubuntu-20.04'
   demands:
